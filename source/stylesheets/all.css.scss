@@ -58,7 +58,6 @@ ul {
 }
 
 .header nav, .main > section {
-	max-width: 60em;
 	margin: 0 auto;
 }
 
@@ -73,6 +72,7 @@ ul {
 		@media only screen and (min-width: 60em) { padding-bottom: 0.2em; }
 	}
 	nav {
+		max-width: 60em;
 		padding: 0 1em;
 		ul {
 			text-align: center;
@@ -109,6 +109,7 @@ ul {
 	background: $green;
 	padding-top: 2em;
 	> section {
+		max-width: 70em;
 		padding: 0 1.5em;
 		@include clearfix;
 		.step {
@@ -119,9 +120,9 @@ ul {
 			}
 			@media only screen and (min-width: 41.25em) {
 				@include clearfix;
-				img, div { float: left; }
-				img { width: 45%; margin-right: 3%; }
-				div { width: 52%; }
+				float: left;
+				width: 46%;
+				&:nth-child(odd) { margin-right: 8%; }
 			}
 		}
 	}
