@@ -2,7 +2,106 @@
 @import "compass/utilities/general/clearfix";
 @import "compass/css3";
 @import "compass/css3/inline-block";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
 
 body {
 	font-size: 1em;
+	font-family: 'Gentium Book Basic', georgia, serif;
+	color: rgba(0,0,0,0.8);
+}
+
+img { max-width: 100%; }
+
+h3 { margin: 0; }
+h1, h2 {
+	font-family: 'Open Sans', arial, sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 2em;
+	margin: 0 0 0.25em 0;
+	@media only screen and (min-width: 35em) { font-size: 4em; }
+	@media only screen and (min-width: 60em) { font-size: 5.5em; }
+}
+h2 {
+	font-size: 1.75em;
+	@media only screen and (min-width: 35em) { font-size: 3em; }
+	@media only screen and (min-width: 60em) { font-size: 4em; }
+}
+h3 {
+	font-size: 1.5em;
+	@media only screen and (min-width: 35em) { font-size: 2.25em; }
+	@media only screen and (min-width: 60em) { font-size: 3em; }
+	font-family: 'Gentium Book Basic', georgia, serif;
+	font-weight: 400;
+}
+
+p {
+	font-size: 1.1em;
+	@media only screen and (min-width: 35em) { font-size: 1.25em; }
+	@media only screen and (min-width: 60em) { font-size: 1.5em; }
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li { margin: 0; }
+}
+
+.header nav, .main > section {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 0 1.5em;
+}
+
+.header {
+	padding: 2em 0;
+	@media only screen and (min-width: 35em) { padding: 3em 0; }
+	@media only screen and (min-width: 60em) { padding: 6em 0; }
+	nav {
+		ul {
+			li {
+				padding: 1em 2em 1em 0;
+				@include inline-block;
+				a {
+					color: rgba(138,155,15,0.9);
+					font-family: 'Open Sans', arial, sans-serif;
+					font-weight: 800;
+					text-decoration: none;
+					-moz-transition: color .5s;
+					-webkit-transition: color .5s;
+					-o-transition: color .5s;
+					transition: color .5s;
+					@media only screen and (min-width: 35em) { font-size: 1.1em; margin-left: 0.1em; }
+					@media only screen and (min-width: 60em) { font-size: 1.25em; }
+
+					&:hover {
+						color: rgba(138,155,15,0.7);
+					}
+				}
+				&:first-child { padding-left: 0; }
+			}
+		}
+	}
+}
+.main {
+	background: rgba(138,155,15,0.9);
+	> section {
+		@include clearfix;
+		.step {
+			margin-bottom: 1em;
+			div {
+				padding: 1em 0;
+			}
+			@media only screen and (min-width: 41.25em) {
+				@include clearfix;
+				img, div { float: left; }
+				img { width: 45%; margin-right: 3%; }
+				div { width: 52%; }
+			}
+		}
+	}
 }
