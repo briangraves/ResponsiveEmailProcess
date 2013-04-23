@@ -5,10 +5,15 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400);
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
 
+$green: rgba(138,155,15,0.9);
+$grey: rgba(0,0,0,0.8);
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
 body {
 	font-size: 1em;
 	font-family: 'Gentium Book Basic', georgia, serif;
-	color: rgba(0,0,0,0.8);
+	color: $grey;
 }
 
 img { max-width: 100%; }
@@ -80,7 +85,7 @@ ul {
 				@include inline-block;
 				a {
 					padding-bottom: 0.2em;
-					color: rgba(138,155,15,0.9);
+					color: $green;
 					font-family: 'Open Sans', arial, sans-serif;
 					font-weight: 800;
 					text-decoration: none;
@@ -92,7 +97,7 @@ ul {
 					@media only screen and (min-width: 60em) { font-size: 1.25em; }
 
 					&:hover {
-						border-bottom: 4px solid rgba(138,155,15,0.9);
+						border-bottom: 4px solid $green;
 						@media only screen and (min-width: 60em) { border-width: 5px; }
 					}
 				}
@@ -101,12 +106,14 @@ ul {
 	}
 }
 .main {
-	background: rgba(138,155,15,0.9);
+	background: $green;
+	padding-top: 2em;
 	> section {
 		padding: 0 1.5em;
 		@include clearfix;
 		.step {
 			margin-bottom: 1em;
+			img { border: 2px solid darken($green, 5%); }
 			div {
 				padding: 1em 0;
 			}
