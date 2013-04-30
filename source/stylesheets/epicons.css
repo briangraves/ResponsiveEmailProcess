@@ -1,0 +1,75 @@
+@font-face {
+	font-family: 'epicons';
+	src:url('/../fonts/epicons.eot');
+	src:url('/../fonts/epicons.eot?#iefix') format('embedded-opentype'),
+		url('/../fonts/epicons.woff') format('woff'),
+		url('/../fonts/epicons.ttf') format('truetype'),
+		url('/../fonts/epicons.svg#epicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'epicons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+h2:before {
+	font-family: 'epicons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.discovery:before {
+	content: "\f05";
+}
+.contentstrategy:before {
+	content: "\f9d";
+}
+.design:before {
+	content: "\f3b";
+}
+.development:before {
+	content: "\f07";
+}
+.execution:before {
+	content: "\f04";
+}
+.development2:before {
+	content: "\f06";
+}
+.discovery2:before {
+	content: "\fb1";
+}
+.design2:before {
+	content: "\f3a";
+}
+.contentstrategy3:before {
+	content: "\fd4";
+}
+.contentstrategy2:before {
+	content: "\fd0";
+}
+.icon-noun_project_4194:before {
+	content: "\fd1";
+}
+.icon-noun_project_4187:before {
+	content: "\fc3";
+}

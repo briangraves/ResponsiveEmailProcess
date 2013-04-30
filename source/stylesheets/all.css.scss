@@ -4,6 +4,7 @@
 @import "compass/css3/inline-block";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400);
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
+/** @import "epicons"; } **/
 
 $green: rgba(138,155,15,0.9);
 $grey: rgba(0,0,0,0.8);
@@ -34,8 +35,14 @@ h1 {
 h2 {
 	font-size: 1.75em;
 	margin: 1em 0 0.5em 0;
+	position: relative;
 	@media only screen and (min-width: 35em) { font-size: 3em; }
 	@media only screen and (min-width: 60em) { font-size: 4em; }
+
+	&:before {
+		color: #fff;
+		font-size: 1.25em;
+	}
 }
 h3 {
 	font-size: 1.5em;
